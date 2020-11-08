@@ -1,0 +1,112 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>remove，empty，append，HTML，each</title>
+	<script type="text/javascript" src="jqurey文件/jquery-3.4.1.js"></script>
+	<style type="text/css">
+		
+	</style>
+	<script type="text/javascript">
+		$(function(){
+			$("#btn").click(function(){
+				// 使用remove，标签里的所有
+				$("select").remove();
+			})
+			
+			$("#btn1").click(function(){
+				// 使用empty，删除子对象
+				$("select").empty();
+			})
+			
+			$("#btn2").click(function(){
+				// 使用append增加dom对象，后面加HTML标签
+				$("#fatcher").append("<button>按钮</button>")
+			})
+			
+			$("#btn3").click(function(){
+				// 使用html（），获取数组中第一个dom对象的文本值（innerHTML）
+				alert($("span").html());//<b>
+				alert($("span").text());//无<b>
+			})
+			
+			$("#btn4").click(function(){
+				// html(值)，设置所有span的值
+				$("span").html("<b>shy</b>");
+			})
+			
+			$("#btn5").click(function(){
+				// 循环普通数组，非dom数组
+				var arr = [1,2,3];
+				$.each(arr,function(i,j){
+					alert("循环变量"+i+"数组成员"+j);
+				})
+			})
+			
+			$("#btn6").click(function(){
+				// 循环json
+				var json ={"name":"shy","age":20};
+				$.each(json,function(i,e){
+					alert("key "+i+" value "+e);
+				})
+			})
+			
+			$("#btn7").click(function(){
+				// 循环dom数组
+				var domArray = $(":text");
+				$.each(domArray,function(i,e){
+					alert(i+""+""+e.value);
+				})
+			})
+			
+			$("#btn8").click(function(){
+				// 循环jQuery对象就是dom数组
+				$(":text").each(function(i,e){
+					alert(i+e.value)
+				})
+			})
+		})
+	</script>
+</head>
+
+<body>
+	<input type="text" value="刘备" />
+	<input type="text" value="关羽" />
+	<input type="text" value="张飞" />
+	<select>
+		<option value="老虎">老虎</option>
+		<option value="狮子">狮子</option>
+		<option value="包子">包子</option>
+	</select>
+	<br />
+	<select>
+		<option value="亚洲">亚洲</option>
+		<option value="欧洲">欧洲</option>
+		<option value="美洲">美洲</option>
+	</select>
+	<br />
+	<div id="fatcher">我是一div</div>
+	<br />
+	<span>Mysql<b>数据库</b></span>
+	<span>JDBC</span>
+	
+	<br />
+	<button id="btn">使用remove删除对象</button>
+	<br />
+	<button id="btn1">使用empty删除子类对象</button>
+	<br />
+	<button id="btn2">使用append增加dom对象</button>
+	<br />
+	<button id="btn3">获取第一dom的文本值</button>
+	<br />
+	<button id="btn4">设置所有span的文本值</button>
+	<br />
+	<button id="btn5">循环普通数组</button>
+	<br />
+	<button id="btn6">循环json</button>
+	<br />
+	<button id="btn7">循环dom数组对象</button>
+	<br />
+	<button id="btn8">循环jquery对象</button>
+</body>
+</html>

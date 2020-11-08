@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+<head>
+      <meta charset="utf-8">
+      <title>Dom对象转为jQuery</title>
+	  <script type="text/javascript" src="jqurey文件/jquery-3.5.1.js"></script>
+	  <script type="text/javascript">
+		  function btnClick(){
+			  // 获取dom对象
+			  var obj = document.getElementById("btn");
+			  // 使用dom的value属性，获取值
+			  alert("使用dom对象的属性"+obj.value)
+			  
+			  // 把dom转为jQuery，使用jQuery库中的函数
+			  var jobj = $(obj);
+			  // 调用jQuery中的函数，获取value值
+			  alert(jobj.val())
+			  
+		  }
+	  </script>
+</head>
+
+<body>
+	<input type="button" id="btn" value="草别瞎按" onclick="btnClick()" />
+</body>
+</html>

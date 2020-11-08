@@ -1,0 +1,57 @@
+<!doctype html>
+<html>
+<head>
+		<meta charset="utf-8">
+		<title>表单选择器</title>
+		<script type="text/javascript" src="jqurey文件/jquery-3.4.1.js"></script>
+		<script type="text/javascript">
+			function fun1(){
+				// 获取text
+				var shy = $(":text");
+				// 获取text的value值
+				alert(shy.val());
+			}
+			
+			function fun2(){
+				// 获取radio
+				var shy = $(":radio");
+				// 数组，男和女，所以遍历数组
+				for(var i =0;i<shy.length;i++){
+					// 使用下标，获取
+					var dom = shy[i];
+					alert(dom.value);
+				}
+			}
+			
+			function fun3(){
+				// 获取checkbox
+				var shy = $(":checkbox");
+				for(var i=0;i<shy.length;i++){
+					var dom = shy[i];
+					// alert(dom.value);
+					// 使用jQuery的vle（）
+					// dom转jQuery
+					var jdom = $(dom);
+					alert("jQuery的函数"+jdom.val());
+				}
+			}
+			
+			
+		</script>
+</head>
+
+<body>
+	<input type="text" value="是text" /><br />
+	
+	<input type="radio" value="man" />男<br />
+	<input type="radio"  value="woman"/>女<br />
+	
+	<input type="checkbox" value="bike"/>骑行<br />
+	<input type="checkbox"  value="football"/>足球<br />
+	<input type="checkbox"  value="music" />音乐<br />
+	
+	<input type="button" value="读取text的值" onclick="fun1()" /><br />
+	<input type="button" value="读取radio的值" onclick="fun2()" /><br />
+		<input type="button" value="读取chackbox的值" onclick="fun3()" /><br />
+</body>
+</html>

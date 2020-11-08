@@ -1,0 +1,73 @@
+<!doctype html>
+<html>
+<head>
+      <meta charset="utf-8">
+      <title>选择器</title>
+	  <style type="text/css">
+		  div{
+			  background: green;
+			  width: 200px;
+			  height: 100px;
+		  }
+		  
+		  .two{
+			  background: gold;
+			  font-size: 30px;
+		  }
+	  </style>
+      <script type="text/javascript" src="jqurey文件/jquery-3.4.1.js"></script>
+	  <script type="text/javascript">
+	  	function fun1(){
+			// id选择器
+			var obj = $("#one");
+			// 使用jQuery改变样式的函数
+			obj.css("background","red");
+		}
+		
+		function fun2(){
+			// 使用样式选择器
+			var obj = $(".two");
+			obj.css("background","yellow")
+		}
+		
+		function fun3(){
+			// 标签选择器
+			var obj = $("div");
+			// 操作数组中的全部成员
+			obj.css("background","black");
+		}
+		
+		function fun4(){
+			// 所以选择器
+			var obj = $("*");
+			obj.css("background","blue");
+			
+		}
+		
+		function fun5(){
+			// 组合选择器
+			var obj = $("#one,span");
+			obj.css("background","orange");
+		}
+	  </script>
+</head>
+
+<body>
+	<div id="one">我是div</div><br />
+	<div class="two">我是样式</div>
+	<br />
+	<div>啥也不是</div>
+	<br/>
+	<span class="two">span啊</span>
+	<br />
+	<input type="button" value="获取id是one对象" onclick="fun1()" />
+	<br/>
+	<input type="button" value="获取class是two对象" onclick="fun2()" />
+	<br />
+	<input type="button" value="使用标签选择器" onclick="fun3()" />
+	<br />
+	<input type="button" value="所以选择器" onclick="fun4()" />
+	<br />
+	<input type="button" value="组合选择器" onclick="fun5()"
+</body>
+</html>

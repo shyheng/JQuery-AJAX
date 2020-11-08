@@ -1,0 +1,73 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>第一组函数</title>
+	<script type="text/javascript" src="jqurey文件/jquery-3.4.1.js"></script>
+	<style type="text/css">
+		div{
+			background: blue;
+		}	
+	</style>
+	<script type="text/javascript">
+		$(function(){
+			$("#btn1").click(function(){
+				//val（）获取dom数组中第一个对象的value值
+				var shy= $(":text").val();
+				alert(shy);
+			})
+			
+			$("#btn2").click(function(){
+				// 设置所有的text的value为新值
+				$(":text").val("三国演义");
+			})
+			
+			$("#btn3").click(function(){
+				// text()拼接成字符串
+				var shy = $("div").text();
+				alert(shy)
+			})
+			
+			$("#btn4").click(function(){
+				// 设置div的文本值
+				$("div").text("设置div值")
+			})
+			
+			$("#btn5").click(function(){
+				// 读取指定属性的值
+				var shy = $("img").attr("src");
+				alert(shy);
+			})
+			
+			$("#btn6").click(function(){
+				// 设置指定属性得到值
+				$("img").attr("src","img/mm.jpg")
+			})
+		})
+	</script>
+</head>
+
+<body>
+	<input type="text" value="刘备" /><br />
+	<input type="text" value="张飞" /><br />
+	<input type="text" value="关羽" /><br />
+	<br />
+	<div>第一个div</div>
+	<div>第二个div</div>
+	<div>第三个div</div>
+	<br />
+	<img src="img/baby.png" id="img1"/>
+	<br />
+	<button value="获取第一文本框的值" id="btn1">获取第一文本框的值</button>
+	<br />
+	<button  id="btn2">设置所以文本框的value值</button>
+	<br />
+	<button  id="btn3">获取所有div的文本值</button>
+	<br />
+	<button  id="btn4">设置div的文本值</button>
+	<br />
+	<button  id="btn5">读取src的值</button>
+	<br />
+	<button  id="btn6">设置指定的属性值</button>
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>过滤器</title>
+	<script type="text/javascript" src="jqurey文件/jquery-3.4.1.js"></script>
+	<style type="text/css">
+		div{
+			background: gray;
+		}
+	</style>
+	<script type="text/javascript">
+		// 相当于是onLoad(),页面加载完执行
+		$(function(){
+			// 当前页面dom对象加载后，给对象绑定事件，因为此时button对象语句在内存中创建好
+			$("#btn1").click(function(){
+				// 过滤器，第一个
+				var shy = $("div:first");
+				shy.css("background","red");
+			})
+			
+			// 绑定事件
+			$("#btn2").click(function(){
+				// 最后一个
+				var shy =$("div:last");
+				shy.css("background","green")
+			})
+			
+			// 绑定事件---eq事件
+			$("#btn3").click(function(){
+				//固定 
+				var shy =$("div:eq(3)");
+				shy.css("background","black");
+			})
+			
+			$("#btn4").click(function(){
+				// 小于
+				var shy = $("div:lt(3)");
+				shy.css("background","orange");
+			})
+			
+			$("#btn5").click(function(){
+				// 大于
+				var shy = $("div:gt(3)");
+				shy.css("background","yellow")
+			})
+		})
+	</script>
+</head>
+
+<body>
+	<div id="one">0</div>
+	<div id="two">1</div>
+	<div>2
+		<div>3</div>
+		<div>4</div>
+	</div>
+	<div>5</div>
+	<br />
+	<span>span</span><br />
+	<br />
+	<input type="button" value="获取第一个div" id="btn1" /><br />
+	<input type="button" value="获取最后一个div" id="btn2" /><br />
+	<input type="button" value="获取固定3的div"id="btn3" /><br />
+	<input type="button" value="获取小于3的div" id="btn4"/><br />
+	<input type="button" value="获取大于3的div" id="btn5"/><br />
+</body>
+</html>

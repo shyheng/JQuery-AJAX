@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/Ajax-jQuery/Ajax-jQuery.iml" filepath="$PROJECT_DIR$/Ajax-jQuery/Ajax-jQuery.iml" />
+      <module fileurl="file://$PROJECT_DIR$/jQuery.iml" filepath="$PROJECT_DIR$/jQuery.iml" />
+      <module fileurl="file://$PROJECT_DIR$/级联查询/级联查询.iml" filepath="$PROJECT_DIR$/级联查询/级联查询.iml" />
+      <module fileurl="file://$PROJECT_DIR$/级联查询1/级联查询1.iml" filepath="$PROJECT_DIR$/级联查询1/级联查询1.iml" />
+    </modules>
+  </component>
+</project>
